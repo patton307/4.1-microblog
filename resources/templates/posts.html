@@ -1,0 +1,13 @@
+<!-- This is the second page. -->
+<html>
+<body>
+<h1>Posts by {{name}}</h1><br>
+<form action="user-input" method="post">
+    <input type="text" placeholder="What do you want to say?" name="message" />
+    <button type="submit">Submit</button>
+</form>
+{{#posts}}
+{{message}}<br>
+{{/posts}}
+</body>
+</html>
