@@ -5,4 +5,5 @@ package com.landonkail;
  */
 public class UserInput {
     String message;
+    int id;
 }

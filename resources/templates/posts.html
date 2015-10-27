@@ -1,13 +1,24 @@
 <!-- This is the second page. -->
 <html>
 <body>
-<h1>Posts by {{name}}</h1><br>
+<h1>Posts by {{username}}</h1><br>
 <form action="user-input" method="post">
     <input type="text" placeholder="What do you want to say?" name="message" />
     <button type="submit">Submit</button>
 </form>
+<form action="delete-post" method="post">
+    <input type="text" placeholder="Which post id do you want to delete?" name="postid"/>
+    <button type="submit">Delete Post</button>
+</form>
+
+<form action="edit-post" method="post">
+    <input type="text" placeholder="Which number do you want to edit?" name="editpostid"/>
+    <input type="text" placeholder="Type your edited post" name="editpost"/>
+    <button type="submit">Edit</button>
+</form>
+
 {{#posts}}
-{{message}}<br>
+{{id}}. {{message}}<br>
 {{/posts}}
 </body>
 </html>
